@@ -1,0 +1,54 @@
+.display-page { min-height: 100vh; padding: 28px; display: grid; grid-template-columns: minmax(300px, .8fr) minmax(420px, 1.2fr); gap: 24px; background: radial-gradient(circle at 50% 0, #143d55, #081f2c 55%, #04141c); color: white; }
+.display-brand, .display-feed { border: 1px solid rgba(255,255,255,.13); border-radius: 30px; background: rgba(255,255,255,.07); box-shadow: 0 24px 80px rgba(0,0,0,.28); backdrop-filter: blur(8px); }
+.display-brand { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 26px; text-align: center; }
+.display-logo { width: min(220px, 55%); filter: drop-shadow(0 8px 24px rgba(0,0,0,.25)); }
+.display-brand h1 { margin: 12px 0 8px; color: white; font-size: clamp(2.3rem, 5vw, 5.1rem); line-height: .9; }
+.display-brand p { color: #cbe5f2; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 800; }
+.qr-wrap { width: min(300px, 70%); margin-top: 16px; padding: 15px; border-radius: 22px; background: white; }
+.qr-wrap img { display: block; width: 100%; }
+.play-url { margin-top: 12px; color: #9ad9ff; font-weight: 900; overflow-wrap: anywhere; }
+.display-feed { position: relative; padding: 26px; overflow: hidden; }
+.display-feed h2 { margin-bottom: 18px; font-size: clamp(1.5rem, 3vw, 2.7rem); }
+.display-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.display-stat { padding: 20px 12px; border-radius: 20px; background: rgba(255,255,255,.09); text-align: center; }
+.display-stat b { display: block; color: #ffe16b; font-size: clamp(2rem, 5vw, 4.7rem); line-height: 1; }
+.display-stat span { display: block; margin-top: 8px; color: #cbe5f2; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .77rem; }
+.winners-list { display: grid; gap: 11px; margin-top: 22px; }
+.winner-row { display: flex; align-items: center; gap: 13px; padding: 15px 16px; border-radius: 17px; background: rgba(255,255,255,.09); animation: winnerRowIn .4s ease; }
+.winner-row .medal { font-size: 2rem; }
+.winner-row strong { display: block; font-size: 1.18rem; }
+.winner-row small { color: #cbe5f2; font-weight: 750; }
+.empty-feed { display: grid; place-items: center; min-height: 260px; color: #cbe5f2; text-align: center; font-size: 1.2rem; font-weight: 800; }
+.display-status { position: absolute; right: 20px; top: 20px; padding: 7px 10px; border-radius: 99px; background: rgba(255,255,255,.1); color: #cbe5f2; font-size: .7rem; font-weight: 900; }
+.fullscreen-btn { position: fixed; right: 16px; bottom: 16px; width: 46px; height: 46px; border: 1px solid rgba(255,255,255,.2); border-radius: 14px; background: rgba(4,20,28,.75); color: white; font-size: 1.2rem; cursor: pointer; }
+.display-celebration { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; padding: 28px; background: rgba(8,22,31,.88); }
+.display-celebration-card { width: min(900px, 92vw); padding: 60px 30px; border: 3px solid #ffe16b; border-radius: 38px; background: radial-gradient(circle at top, #164c69, #071f2c); color: white; text-align: center; box-shadow: 0 30px 90px rgba(0,0,0,.5); animation: celebrationPop .5s cubic-bezier(.2,.9,.25,1.25); }
+.display-celebration-card .big { font-size: clamp(5rem, 15vw, 11rem); line-height: 1; }
+.display-celebration-card h2 { margin: 8px 0; color: #ffe16b; font-size: clamp(3rem, 8vw, 7rem); line-height: .9; }
+.display-celebration-card p { margin: 0; color: white; font-size: clamp(1.5rem, 4vw, 3.5rem); font-weight: 900; }
+
+@keyframes winnerPulse { 50% { transform: scale(1.035); } }
+@keyframes celebrationPop { from { opacity: 0; transform: scale(.76) rotate(-2deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+@keyframes celebrationBounce { to { transform: translateY(-10px) rotate(4deg); } }
+@keyframes toastIn { from { opacity: 0; transform: translateY(-10px); } }
+@keyframes winnerRowIn { from { opacity: 0; transform: translateX(20px); } }
+
+@media (min-width: 620px) {
+  .mode-grid { grid-template-columns: 1fr 1fr; }
+  .modal-backdrop { align-items: center; padding: 18px; }
+  .modal { border-radius: 26px; padding-bottom: 24px; }
+}
+@media (max-width: 850px) {
+  .display-page { grid-template-columns: 1fr; }
+  .display-brand { min-height: 48vh; }
+}
+@media (max-width: 430px) {
+  .bingo-square { padding: 6px 3px; border-width: 1.5px; }
+  .status-row { gap: 5px; }
+  .stat-pill { padding: 8px 4px; }
+  .game-topbar { gap: 7px; }
+  .game-logo { width: 50px; height: 50px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
