@@ -1,0 +1,12 @@
+{
+  "name": "Big Day of Play Fitness Bingo",
+  "short_name": "Play Bingo",
+  "description": "Inclusive Health's mobile fitness bingo game.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7fbfd",
+  "theme_color": "#0b2533",
+  "icons": [
+    {"src": "assets/inclusive-health-logo.png", "sizes": "128x128", "type": "image/png", "purpose": "any"}
+  ]
+}
