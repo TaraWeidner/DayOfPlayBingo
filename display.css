@@ -1,7 +1,13 @@
 .display-page { min-height: 100vh; padding: 28px; display: grid; grid-template-columns: minmax(300px, .8fr) minmax(420px, 1.2fr); gap: 24px; background: radial-gradient(circle at 50% 0, #143d55, #081f2c 55%, #04141c); color: white; }
 .display-brand, .display-feed { border: 1px solid rgba(255,255,255,.13); border-radius: 30px; background: rgba(255,255,255,.07); box-shadow: 0 24px 80px rgba(0,0,0,.28); backdrop-filter: blur(8px); }
 .display-brand { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 26px; text-align: center; }
-.display-logo { width: min(220px, 55%); filter: drop-shadow(0 8px 24px rgba(0,0,0,.25)); }
+.display-logo-lockup { display: flex; flex-direction: column; align-items: center; margin-bottom: 12px; filter: drop-shadow(0 8px 24px rgba(0,0,0,.28)); }
+.display-logo-mark { width: clamp(180px, 18vw, 240px); height: clamp(104px, 10.5vw, 140px); overflow: hidden; }
+.display-logo-mark img { display: block; width: 100%; height: auto; }
+.display-logo-wordmark { display: flex; flex-direction: column; align-items: center; margin-top: -2px; color: white; font-family: Arial, Helvetica, sans-serif; font-weight: 900; text-transform: uppercase; line-height: .92; text-shadow: 0 2px 3px rgba(0,0,0,.18); }
+.display-logo-inclusive { font-size: clamp(1.5rem, 2.5vw, 2.15rem); letter-spacing: .11em; padding-left: .11em; }
+.display-logo-health { display: flex; align-items: center; gap: .38em; margin-top: 8px; font-size: clamp(1.4rem, 2.35vw, 2rem); letter-spacing: .08em; padding-left: .08em; }
+.display-logo-health i { display: block; width: 1.4em; height: .15em; border-radius: 999px; background: currentColor; }
 .display-brand h1 { margin: 12px 0 8px; color: white; font-size: clamp(2.3rem, 5vw, 5.1rem); line-height: .9; }
 .display-brand p { color: #cbe5f2; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 800; }
 .qr-wrap { width: min(380px, 82%); margin-top: 16px; padding: 22px; border-radius: 22px; background: white; box-shadow: 0 12px 34px rgba(0,0,0,.24); }
@@ -48,6 +54,7 @@
   .stat-pill { padding: 8px 4px; }
   .game-topbar { gap: 7px; }
   .game-logo { width: 50px; height: 50px; }
+  .display-logo-mark { width: 190px; height: 110px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
