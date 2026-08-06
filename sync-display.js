@@ -40,16 +40,25 @@ function addLocalEvent(type, payload, id = uid()) {
   } catch { /* local display stats are optional */ }
 }
 
+async function loadDisplayLogo() {
+  const logo = document.getElementById('display-logo-white');
+  if (!logo) return;
+  try {
+    const response = await fetch('assets/inclusive-health-logo-white-data.txt?v=20260806-7', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Logo request failed: ${response.status}`);
+    const dataUri = (await response.text()).trim();
+    if (!dataUri.startsWith('data:image/png;base64,')) throw new Error('Logo data is invalid');
+    logo.src = dataUri;
+  } catch (error) {
+    console.warn(error);
+    logo.src = 'assets/inclusive-health-logo.png';
+  }
+}
+
 function renderDisplay() {
   document.body.innerHTML = `<main class="display-page">
     <section class="display-brand">
-      <div class="display-logo-lockup" aria-label="Inclusive Health">
-        <div class="display-logo-mark" aria-hidden="true"><img src="assets/inclusive-health-logo.png" alt=""></div>
-        <div class="display-logo-wordmark" aria-hidden="true">
-          <span class="display-logo-inclusive">INCLUSIVE</span>
-          <span class="display-logo-health"><i></i>HEALTH<i></i></span>
-        </div>
-      </div>
+      <img id="display-logo-white" class="display-logo" alt="Inclusive Health">
       <p>Scan to join</p>
       <h1>Big Day of Play<br>Fitness Bingo</h1>
       <div class="qr-wrap"><img src="assets/play-qr.svg?v=20260806-5" alt="QR code to open the Big Day of Play bingo game"></div>
@@ -67,6 +76,7 @@ function renderDisplay() {
     </section>
     <button class="fullscreen-btn" id="fullscreen-btn" aria-label="Toggle fullscreen">⛶</button>
   </main>`;
+  loadDisplayLogo();
   document.getElementById('fullscreen-btn').addEventListener('click', () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.());
   refreshDisplay(true);
   displayPoll = setInterval(() => refreshDisplay(false), 4000);
