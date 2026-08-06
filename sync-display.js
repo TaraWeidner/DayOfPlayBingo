@@ -43,7 +43,13 @@ function addLocalEvent(type, payload, id = uid()) {
 function renderDisplay() {
   document.body.innerHTML = `<main class="display-page">
     <section class="display-brand">
-      <img class="display-logo" src="assets/inclusive-health-logo.png" alt="Inclusive Health">
+      <div class="display-logo-lockup" aria-label="Inclusive Health">
+        <div class="display-logo-mark" aria-hidden="true"><img src="assets/inclusive-health-logo.png" alt=""></div>
+        <div class="display-logo-wordmark" aria-hidden="true">
+          <span class="display-logo-inclusive">INCLUSIVE</span>
+          <span class="display-logo-health"><i></i>HEALTH<i></i></span>
+        </div>
+      </div>
       <p>Scan to join</p>
       <h1>Big Day of Play<br>Fitness Bingo</h1>
       <div class="qr-wrap"><img src="assets/play-qr.svg?v=20260806-5" alt="QR code to open the Big Day of Play bingo game"></div>
