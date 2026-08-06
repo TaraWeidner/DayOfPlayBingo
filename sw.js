@@ -1,4 +1,4 @@
-const CACHE_NAME = 'day-of-play-bingo-v1';
+const CACHE_NAME = 'day-of-play-bingo-v2';
 const APP_SHELL = [
   './',
   './index.html',
