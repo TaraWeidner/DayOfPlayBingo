@@ -5,6 +5,7 @@ const APP_SHELL = [
   './styles-base.css',
   './overlays.css',
   './display.css',
+  './helpers.js',
   './data.js',
   './core-ui.js',
   './core-play.js',
