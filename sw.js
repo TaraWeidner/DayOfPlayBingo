@@ -1,20 +1,20 @@
-const CACHE_NAME = 'day-of-play-bingo-v4';
+const CACHE_NAME = 'day-of-play-bingo-v5';
 const APP_SHELL = [
   './',
   './index.html',
   './styles-base.css',
   './overlays.css',
-  './display.css?v=20260806-4',
+  './display.css?v=20260806-5',
   './helpers.js',
   './data.js',
   './core-ui.js',
   './core-play.js',
   './effects.js',
-  './sync-display.js?v=20260806-4',
+  './sync-display.js?v=20260806-5',
   './config.js',
   './manifest.webmanifest',
   './assets/inclusive-health-logo.png',
-  './assets/play-qr.png?v=20260806-3'
+  './assets/play-qr.svg?v=20260806-5'
 ];
 
 self.addEventListener('install', event => {
