@@ -9,7 +9,9 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/inclusive-health-logo.png">
   <link rel="apple-touch-icon" href="assets/inclusive-health-logo.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="overlays.css">
+  <link rel="stylesheet" href="display.css">
 </head>
 <body>
   <noscript>This game needs JavaScript enabled to play.</noscript>
@@ -17,6 +19,10 @@
   <div id="toast-region" class="toast-region" aria-live="assertive" aria-atomic="true"></div>
   <canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
   <script src="config.js"></script>
-  <script src="app.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="core-ui.js" defer></script>
+  <script src="core-play.js" defer></script>
+  <script src="effects.js" defer></script>
+  <script src="sync-display.js" defer></script>
 </body>
 </html>
