@@ -1,16 +1,16 @@
-const CACHE_NAME = 'day-of-play-bingo-v5';
+const CACHE_NAME = 'day-of-play-bingo-v6';
 const APP_SHELL = [
   './',
   './index.html',
   './styles-base.css',
   './overlays.css',
-  './display.css?v=20260806-5',
+  './display.css?v=20260806-6',
   './helpers.js',
   './data.js',
   './core-ui.js',
   './core-play.js',
   './effects.js',
-  './sync-display.js?v=20260806-5',
+  './sync-display.js?v=20260806-6',
   './config.js',
   './manifest.webmanifest',
   './assets/inclusive-health-logo.png',
