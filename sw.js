@@ -1,4 +1,4 @@
-const CACHE_NAME = 'day-of-play-bingo-v2';
+const CACHE_NAME = 'day-of-play-bingo-v3';
 const APP_SHELL = [
   './',
   './index.html',
@@ -14,7 +14,7 @@ const APP_SHELL = [
   './config.js',
   './manifest.webmanifest',
   './assets/inclusive-health-logo.png',
-  './assets/play-qr.png'
+  './assets/play-qr.png?v=20260806-3'
 ];
 
 self.addEventListener('install', event => {
