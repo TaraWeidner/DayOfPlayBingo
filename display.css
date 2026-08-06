@@ -5,7 +5,7 @@
 .display-brand h1 { margin: 12px 0 8px; color: white; font-size: clamp(2.3rem, 5vw, 5.1rem); line-height: .9; }
 .display-brand p { color: #cbe5f2; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 800; }
 .qr-wrap { width: min(380px, 82%); margin-top: 16px; padding: 22px; border-radius: 22px; background: white; box-shadow: 0 12px 34px rgba(0,0,0,.24); }
-.qr-wrap img { display: block; width: 100%; height: auto; aspect-ratio: 1; image-rendering: crisp-edges; image-rendering: pixelated; }
+.qr-wrap img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; image-rendering: auto; }
 .play-url { margin-top: 12px; color: #9ad9ff; font-weight: 900; overflow-wrap: anywhere; }
 .display-feed { position: relative; padding: 26px; overflow: hidden; }
 .display-feed h2 { margin-bottom: 18px; font-size: clamp(1.5rem, 3vw, 2.7rem); }
