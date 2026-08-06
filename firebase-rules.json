@@ -1,0 +1,26 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "events": {
+      "big-day-of-play-2026": {
+        ".read": true,
+        "sessions": {
+          "$sessionId": {
+            ".write": "newData.hasChildren(['nickname','mode','createdAt']) && newData.child('nickname').isString() && newData.child('nickname').val().length <= 30"
+          }
+        },
+        "challengeEvents": {
+          "$eventId": {
+            ".write": "newData.hasChildren(['sessionId','activityId','timestamp'])"
+          }
+        },
+        "wins": {
+          "$winId": {
+            ".write": "newData.hasChildren(['sessionId','nickname','mode','bingoCount','timestamp']) && newData.child('nickname').isString() && newData.child('nickname').val().length <= 30"
+          }
+        }
+      }
+    }
+  }
+}
