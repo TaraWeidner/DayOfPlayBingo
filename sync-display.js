@@ -46,7 +46,7 @@ function renderDisplay() {
       <img class="display-logo" src="assets/inclusive-health-logo.png" alt="Inclusive Health">
       <p>Scan to join</p>
       <h1>Big Day of Play<br>Fitness Bingo</h1>
-      <div class="qr-wrap"><img src="assets/play-qr.png?v=20260806-3" alt="QR code to open the Big Day of Play bingo game"></div>
+      <div class="qr-wrap"><img src="assets/play-qr.svg?v=20260806-5" alt="QR code to open the Big Day of Play bingo game"></div>
       <div class="play-url">${escapeHtml(CONFIG.playUrl)}</div>
     </section>
     <section class="display-feed">
