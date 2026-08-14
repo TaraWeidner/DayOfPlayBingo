@@ -77,8 +77,8 @@ function renderWelcome() {
       <div class="brandbar">
         <img class="brand-logo" src="assets/inclusive-health-logo.png" alt="Inclusive Health logo">
         <div class="brand-copy">
-          <p class="eyebrow">Inclusive Health presents</p>
-          <h1>Big Day of Play <span class="rainbow-word">${rainbow('Bingo')}</span></h1>
+          <p class="eyebrow">Presented by Inclusive Health</p>
+          <h1>Physical Activity <span class="rainbow-word">${rainbow('BINGO')}</span></h1>
           <p class="subtitle">Scan. Move. Play. Complete a bingo right on your phone.</p>
         </div>
       </div>
@@ -147,7 +147,7 @@ function renderGame(highlight = []) {
     <main class="game-shell">
       <header class="game-topbar">
         <img class="game-logo" src="assets/inclusive-health-logo.png" alt="Inclusive Health">
-        <div class="game-title"><h1>Big Day of Play</h1><p>${escapeHtml(state.nickname)} · ${modeLabel}</p></div>
+        <div class="game-title"><h1>Physical Activity BINGO</h1><p>${escapeHtml(state.nickname)} · ${modeLabel}</p></div>
         <button class="icon-btn" id="home-btn" type="button" aria-label="Game menu">☰</button>
       </header>
       <section class="status-row" aria-label="Game progress">
@@ -157,7 +157,7 @@ function renderGame(highlight = []) {
       </section>
       <div class="progress-track" aria-hidden="true"><div class="progress-fill" style="width:${progress}%"></div></div>
       <div class="bingo-head" aria-hidden="true">${'BINGO'.split('').map(letter => `<div class="bingo-letter">${letter}</div>`).join('')}</div>
-      <section class="bingo-grid" aria-label="Fitness bingo card">
+      <section class="bingo-grid" aria-label="Physical activity bingo card">
         ${card.map((item, index) => squareMarkup(item, index, highlight)).join('')}
       </section>
       <footer class="game-footer">
