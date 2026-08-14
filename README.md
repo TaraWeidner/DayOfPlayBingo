@@ -1,6 +1,6 @@
-# Big Day of Play Fitness Bingo
+# Physical Activity BINGO
 
-A mobile-first, Inclusive Health-branded fitness bingo game for Big Day of Play.
+A mobile-first, Inclusive Health-branded physical activity bingo game designed for reuse at community events, outreach activities, and health fairs.
 
 ## What is included
 
@@ -17,7 +17,7 @@ A mobile-first, Inclusive Health-branded fitness bingo game for Big Day of Play.
 
 The included GitHub Actions workflow deploys the repository to GitHub Pages. In the repository, open **Settings → Pages** and set the source to **GitHub Actions** if it is not already selected.
 
-Expected player URL:
+Player URL:
 
 `https://taraweidner.github.io/DayOfPlayBingo/`
 
