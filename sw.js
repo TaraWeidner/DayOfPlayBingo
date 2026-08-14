@@ -1,19 +1,19 @@
-const CACHE_NAME = 'day-of-play-bingo-v8';
+const CACHE_NAME = 'physical-activity-bingo-v1';
 const APP_SHELL = [
   './',
   './index.html',
   './styles-base.css',
   './overlays.css',
-  './display.css?v=20260806-8',
+  './display.css?v=20260814-1',
   './helpers.js',
   './data.js',
-  './core-ui.js',
+  './core-ui.js?v=20260814-1',
   './core-play.js',
   './effects.js',
-  './sync-display.js?v=20260806-8',
-  './config.js',
-  './manifest.webmanifest',
-  './assets/inclusive-health-logo.png?v=20260806-8',
+  './sync-display.js?v=20260814-1',
+  './config.js?v=20260814-1',
+  './manifest.webmanifest?v=20260814-1',
+  './assets/inclusive-health-logo.png?v=20260814-1',
   './assets/play-qr.svg?v=20260806-5'
 ];
 
