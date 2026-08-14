@@ -43,10 +43,10 @@ function addLocalEvent(type, payload, id = uid()) {
 function renderDisplay() {
   document.body.innerHTML = `<main class="display-page">
     <section class="display-brand">
-      <img class="display-logo" src="assets/inclusive-health-logo.png?v=20260806-8" alt="Inclusive Health">
-      <p>Scan to join</p>
-      <h1>Big Day of Play<br>Fitness Bingo</h1>
-      <div class="qr-wrap"><img src="assets/play-qr.svg?v=20260806-5" alt="QR code to open the Big Day of Play bingo game"></div>
+      <img class="display-logo" src="assets/inclusive-health-logo.png?v=20260814-1" alt="Inclusive Health">
+      <p>Presented by Inclusive Health · Scan to join</p>
+      <h1>Physical Activity<br>BINGO</h1>
+      <div class="qr-wrap"><img src="assets/play-qr.svg?v=20260806-5" alt="QR code to open the Physical Activity BINGO game"></div>
       <div class="play-url">${escapeHtml(CONFIG.playUrl)}</div>
     </section>
     <section class="display-feed">
